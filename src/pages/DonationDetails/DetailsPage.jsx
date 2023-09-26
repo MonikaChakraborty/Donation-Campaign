@@ -1,7 +1,39 @@
+import swal from "sweetalert";
 
 const DetailsPage = ({donationDetail}) => {
 
     const {image, title, text_btn_color, description, price} = donationDetail || {}
+
+    const handleDonate = () => {
+        // console.log(donationDetail);
+
+        const donationsArray = [];
+        const donateItems = JSON.parse(localStorage.getItem('donations'))
+
+
+        if(!donateItems){
+            donationsArray.push(donationDetail)
+            localStorage.setItem('donations', JSON.stringify(donationsArray))
+
+            swal("Good job!", "Your donation added!", "success");
+
+        }
+
+        else{
+
+            const isExist = donateItems.find(donationDetail => donationDetail.title === title)
+
+
+            if(!isExist){
+                donationsArray.push(...donateItems, donationDetail)
+                localStorage.setItem('donations', JSON.stringify(donationsArray))
+                swal("Good job!", "Your donation added!", "success");
+            }
+            else{
+                swal("Sorry!", "Already Exists!", "error");
+            }
+        }
+    }
 
     const btnBackgroundColor = {
         backgroundColor: text_btn_color,
@@ -14,7 +46,7 @@ const DetailsPage = ({donationDetail}) => {
 
             {/* <div className="absolute bottom-0 -top-3 left-0 w-full h-16 bg-gradient-to-t from-transparent to-black opacity-70 p-6"> */}
             <div className="absolute  bottom-8 left-0 w-full h-[25vh] md:h-[32vh] lg:h-[14vh] bg-gradient-to-t from-transparent to-black opacity-70 "> </div>
-                <button className="absolute text-white px-6 py-2  left-5 bottom-11 md:bottom-14 text-xl font-semibold" style={btnBackgroundColor}>Donate ${price}</button>
+                <button onClick={handleDonate} className="absolute text-white px-6 py-2  left-5 bottom-11 md:bottom-14 text-xl font-semibold" style={btnBackgroundColor}>Donate ${price}</button>
             
         </div>
        
