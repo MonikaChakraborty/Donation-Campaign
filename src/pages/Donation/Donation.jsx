@@ -87,7 +87,7 @@ const Donation = () => {
   return (
     <div>
       {notFound ? (
-        <p className="flex justify-center items-center text-4xl font-semibold">{notFound}</p>
+        <p className="flex justify-center items-center text-4xl font-semibold h-[60vh]">{notFound}</p>
       ) : (
         <div className="max-w-screen-xl mx-auto flex flex-col justify-center items-center pb-14">
           <div className="pb-8 grid grid-cols-2 gap-5">
