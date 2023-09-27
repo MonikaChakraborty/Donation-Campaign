@@ -12,7 +12,7 @@ const Banner = () => {
        <div className=' text-center flex justify-center items-center'>
         
        <input type="text" placeholder='Search here....' className="pl-2 pr-20 py-3 border border-solid border-slate-300 border-r-0  relative  rounded-l-lg" />
-        <span className="text-white text-lg font-medium p-2.5 px-5 border border-[#FF444A] bg-[#FF444A] border-l-0 rounded-r-lg   relative">Search</span>
+        <span className="text-white text-lg font-medium p-2.5 px-5 border border-[#FF444A] bg-[#FF444A] border-l-0 rounded-r-lg relative">Search</span>
 
        </div>
                 

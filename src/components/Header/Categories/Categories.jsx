@@ -3,7 +3,7 @@ import CategoriesCard from "./CategoriesCard";
 
 const Categories = ({categories}) => {
 
-    console.log(categories);
+    // console.log(categories);
     return (
         <div className="-mt-24 pb-24 max-w-screen-xl mx-auto">
 
