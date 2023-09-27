@@ -14,12 +14,12 @@ const Banner = ({ setSearchCategory }) => {
                 <div className="w-full h-[75vh] bg-[url('Resources/banner.jpeg')] bg-cover bg-center">
                     <div className="w-full h-full flex justify-center items-center backdrop-brightness-50 flex-col">
                         <div className="absolute inset-0 bg-white opacity-80"></div>
-                        <h1 className='text-[#0B0B0B] text-4xl font-semibold mb-3 relative'>I Grow By Helping People In Need</h1>
+                        <h1 className='text-[#0B0B0B] text-xl md:text-3xl lg:text-4xl font-semibold mb-3 relative'>I Grow By Helping People In Need</h1>
                         <div className='text-center flex justify-center items-center'>
                             <input
                                 type="text"
                                 placeholder='Search here....'
-                                className="pl-2 pr-20 py-3 border border-solid border-slate-300 border-r-0 relative rounded-l-lg"
+                                className="pl-2 lg:pr-20 py-3 border border-solid border-slate-300 border-r-0 relative rounded-l-lg"
                                 value={inputCategory}
                                 onChange={item => setInputCategory(item.target.value)}/>
                             <span

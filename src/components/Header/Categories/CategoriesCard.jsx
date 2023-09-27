@@ -26,13 +26,13 @@ const CategoriesCard = ({category}) => {
       <Link to={`/categories/${title}`}>
       <div className="card card-compact bg-base-100 shadow-xl" style={cardBackgroundColor}>
         <figure>
-          <img
+          <img className="object-cover w-full"
             src={image}
             alt=""
           />
         </figure>
-        <div className="card-body">
-          <h2 style={{...categoryBackgroundColor, ...cardTextColor} }className="flex justify-center text-[14px] font-medium">{category_name}</h2>
+        <div className="card-body my-5">
+          <h2 style={{...categoryBackgroundColor, ...cardTextColor} }className="flex justify-center text-[14px] font-medium ">{category_name}</h2>
           <p className="text-xl font-semibold" style={cardTextColor}>{title}</p>
 
           {/* <div className="card-actions justify-end">
