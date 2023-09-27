@@ -14,9 +14,6 @@ const CategoriesCard = ({category}) => {
         backgroundColor: category_bg_color,
         padding: "0.2rem",
         maxWidth: "100px",
-        // color: "red",
-        // display: "inline-block",
-        // textOverflow: "ellipsis",
         borderRadius: "0.25rem",
     };
 

@@ -8,7 +8,7 @@ const DetailsPage = ({donationDetail}) => {
         // console.log(donationDetail);
 
         const donationsArray = [];
-        const donateItems = JSON.parse(localStorage.getItem('donations'))
+        const donateItems = JSON.parse(localStorage.getItem('donations'));
 
 
         if(!donateItems){
